@@ -1,0 +1,50 @@
+body{
+    background :none repeat scroll 0 0 #eee;
+    color: #3e3333;
+    font-family: cursive;
+    font-size: 15px;
+    font-weight: 100;
+    
+
+}
+.unitedLogo {
+ width:89.688em;
+ height:4.01em;
+ background-image:url("United Logo.png");
+ background-position: 0px -15px !important;
+ background-size:23%;
+ background-repeat:no-repeat;
+ background-color: darkblue;
+ line-height:12em;
+ display:inline-block;
+ margin-right: 15.6428em;
+}
+
+label{
+    display: flex;
+    flex-direction: row;
+}
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+input {
+  display: block;
+  font-family: 'Times New Roman', Times, serif;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #dedede;
+  margin: 10px;
+  font-size: 1.2em;
+  padding-left:5px;
+  line-height:1.5;
+  border-radius: 3px;
+  color: #777;
+}
+span.validate{
+   margin: 10px;
+   font-family: 'Times New Roman', Times, serif;
+    color: #FF0000;
+    font-size: 15px;
+    font-weight: 100;
+}

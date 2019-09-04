@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html>
+<html ng-app = "simpleFlightSearch">
+<head>
+    <title>Simple Flight Search</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.2/angular.min.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="flight.js" ></script>
+   
+</head>
+<body>
+     <div class="unitedLogo"></div>
+    <div ng-controller="MainCtrl">
+        <div class="w3-container">
+        <center><b><h3>Flight Status Details</h3></b></center>
+        </div><br>
+        
+<div class="w3-row">
+<div class="w3-third w3-container">
+    <div>
+  <h3>Flight Number: &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp(OR)</h3>  
+     <input type='text' ng-model='fNumber' placeholder="Flight Number" />
+     <span class ="validate" ng-show="flightNumberError">
+             Please provide the valid Flight Number (or) Origin and Destination.<br>
+    </span>
+    </div>
+    <div>
+        <h3>Date:</h3>  
+   <input type='text' ng-model='date' placeholder="YYYY-MM-DD" />
+   <span class ="validate" ng-show="dateError">
+             Please provide a valid Date to proceed.<br>
+    </span>
+</div>
+<div>
+ <br>
+  <button class="btn btn primary" ng-click="search(fNumber, origin, destination, date)">Search</button>
+</div>
+</div>
+<div class="w3-third w3-container">
+  <h3>Origin:</h3>  
+     <input type='text' ng-model='origin' placeholder="Origin" />
+</div>
+<div class="w3-third w3-container">
+ <h3>Destination:</h3>  
+ <input type='text' ng-model='destination' placeholder="Destination" />
+</div>
+</div>
+   <br>
+        <br><br>
+     <div ng-if="totalFlights.length" class ="w3-container">
+        <table class= "w3-table"style="width:100%">
+            <tbody>
+        <tr>
+            <th>Flight Number</th>
+            <th>Carrier</th>
+            <th>Origin</th>
+            <th>Departure</th>
+            <th>Destination</th>
+            <th>Arrival</th>
+            <th>Aircraft</th>
+            <th>Distance</th>
+            <th>Travel Time</th>
+            <th>Status</th>
+            </tr>
+           
+        <tr ng-if="totalFlights.length > 0" ng-repeat="flight in totalFlights">
+            <td>{{flight.flightNumber}}</td>
+            <td>{{flight.carrier}}</td>
+            <td>{{flight.origin}}</td>
+            <td>{{flight.departure}}</td>
+            <td>{{flight.destination}}</td>
+            <td>{{flight.arrival}}</td>
+            <td>{{flight.aircraft}}</td>
+            <td>{{flight.distance}}</td>
+            <td>{{flight.travelTime}}</td>
+            <td>{{flight.status}}</td> 
+            </tr>
+            </tbody>
+            </table>
+          <br>
+          <hr>
+          <br>
+          </div>
+    </div>
+</body>
+</html>

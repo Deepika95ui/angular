@@ -1,0 +1,19 @@
+{
+  "name": "simpleflightsearch",
+  "version": "1.0.0",
+  "description": "Create a simple application to that can display results on a web page",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lvblazer/simpleFlightSearch.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lvblazer/simpleFlightSearch/issues"
+  },
+  "homepage": "https://github.com/lvblazer/simpleFlightSearch#readme"
+}
